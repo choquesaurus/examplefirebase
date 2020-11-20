@@ -4,15 +4,7 @@ import "firebase/firestore";
 import "firebase/storage"
 import  "firebase/auth"
 
-let firebaseConfig = {
-  apiKey: "AIzaSyD7ROJBVJ3H74BElJy1eXCq1GS-vyEw3_s",
-  authDomain: "exampleparcial.firebaseapp.com",
-  databaseURL: "https://exampleparcial.firebaseio.com",
-  projectId: "exampleparcial",
-  storageBucket: "exampleparcial.appspot.com",
-  messagingSenderId: "454041125625",
-  appId: "1:454041125625:web:b6a2d32e84e4cf8cbb5828"
-};
+let firebaseConfig = JSON.parse(process.env.firebaseconfig)
 // const {
 //   REACT_APP_FIREBASE_apiKey,
 //   REACT_APP_FIREBASE_authDomain,
