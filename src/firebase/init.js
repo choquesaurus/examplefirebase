@@ -1,10 +1,11 @@
 import firebase from "firebase/app";
-import "firebase/messaging";
+//import "firebase/messaging";
 import "firebase/firestore";
 import "firebase/storage"
 import  "firebase/auth"
 
-let firebaseConfig = JSON.parse(process.env.firebaseconfig)
+let firebaseConfig = JSON.parse(process.env.REACT_APP_FIREBASE_CONFIG)
+
 // const {
 //   REACT_APP_FIREBASE_apiKey,
 //   REACT_APP_FIREBASE_authDomain,
@@ -26,7 +27,7 @@ let firebaseConfig = JSON.parse(process.env.firebaseconfig)
 // Initialize Firebase
 
 firebase.initializeApp(firebaseConfig);
-export const messaging = firebase.messaging();
+//export const messaging = firebase.messaging();
 export const auth = firebase.auth()
 export const database = firebase.firestore();
 export const storage = firebase.storage();
